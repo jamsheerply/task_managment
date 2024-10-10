@@ -5,11 +5,13 @@ import userModel from "../../model/user.model";
 import { generateToken } from "../../utils/generateToken";
 import otpValidationSchema from "../../utils/validation/otpValidation";
 
-export const cookieOptions = {
+import { CookieOptions } from "express";
+
+export const cookieOptions: CookieOptions = {
   expires: new Date(Date.now() + 20 * 24 * 60 * 60 * 1000), // 20 days from now
-  httpOnly: true, // Accessible only by the web server
-  secure: process.env.NODE_ENV === "production", // Send cookie only over HTTPS in production
-  // sameSite: "strict", // Helps protect against CSRF attacks
+  httpOnly: true,
+  sameSite: "strict",
+  secure: true,
 };
 
 const verifyOtpController = async (
