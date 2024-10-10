@@ -7,7 +7,7 @@ import otpValidationSchema from "../../utils/validation/otpValidation";
 import { CookieOptions } from "express";
 
 export const cookieOptions: CookieOptions = {
-  expires: new Date(Date.now() + 20 * 24 * 60 * 60 * 1000), // 20 days from now
+  maxAge: 20 * 24 * 60 * 60 * 1000,
   httpOnly: true,
   sameSite: "strict",
   secure: true,
