@@ -64,7 +64,7 @@ const userSlice = createSlice({
       })
       .addCase(Userlogin.fulfilled, (state, { payload }) => {
         state.loading = false;
-        state.user = payload.user;
+        state.user = payload.data;
         toast.success("Login successful");
       })
       .addCase(Userlogin.rejected, (state, { payload }) => {
