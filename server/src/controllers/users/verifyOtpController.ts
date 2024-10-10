@@ -4,7 +4,6 @@ import { hashPassword } from "../../utils/hashPassword";
 import userModel from "../../model/user.model";
 import { generateToken } from "../../utils/generateToken";
 import otpValidationSchema from "../../utils/validation/otpValidation";
-
 import { CookieOptions } from "express";
 
 export const cookieOptions: CookieOptions = {
