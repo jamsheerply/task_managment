@@ -9,6 +9,10 @@ RUN npm install
 
 COPY . .
 
+RUN ls -al 
+
+RUN npm run build
+
 EXPOSE 5000
 
-CMD [ "npm", "dev" ]
+CMD [ "npm", "start" ]
