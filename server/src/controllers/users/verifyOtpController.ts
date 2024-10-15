@@ -9,7 +9,7 @@ import { CookieOptions } from "express";
 export const cookieOptions: CookieOptions = {
   maxAge: 20 * 24 * 60 * 60 * 1000,
   httpOnly: true,
-  sameSite: "strict",
+  sameSite: "none",
   secure: true,
 };
 

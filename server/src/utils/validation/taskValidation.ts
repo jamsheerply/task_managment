@@ -14,9 +14,9 @@ const taskValidationSchema = Joi.object({
     "any.required": "title is required",
     "string.pattern.base": "title must not contain spaces",
   }),
-  task: Joi.string().min(3).max(30).optional().messages({
+  task: Joi.string().min(3).max(100).optional().messages({
     "string.min": "Task must be at least 3 characters",
-    "string.max": "Task must not exceed 30 characters",
+    "string.max": "Task must not exceed 100 characters",
     "any.required": "Task is required",
   }),
   status: Joi.alternatives()
